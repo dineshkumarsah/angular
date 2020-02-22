@@ -15,10 +15,11 @@ export class HerosComponent implements OnInit {
   constructor( public routes:Router) { }
 
   selectedHero(hero: Hero) {
-    this.sel = hero;
+    //this.sel = hero;
+    this.routes.navigate(['home/hero',hero.id,hero.name]);
   }
   addNew(){
-    this.routes.navigate(["/home/DataForm"]);
+    this.routes.navigate(["/home/DataForm"], { queryParams: { order: 'popular' } });
 
   }
 
