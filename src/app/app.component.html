@@ -1,11 +1,12 @@
-<header class="header">
-  <h1 class="logo"><a routerLink="/home">Debat</a></h1>
-  <ul class="main-nav">
-    <li><a routerLink="/info/contact">Info</a></li>
-    <li><a routerLink="/login">Leave Apply</a></li>
-    <li><a routerLink="/company-record">Company Record</a></li>
-    <li><a routerLink="/moduletest">moduletest</a></li>
-    <li><a routerLink="/servicemodule">servicemodule</a></li>
-  </ul>
-</header>
-<router-outlet></router-outlet>
+<mat-toolbar color="default" class="fixed-header">
+  <mat-toolbar-row>
+    <a routerLink="/login">Leave</a>
+    <a class="navbar-brand" routerLink="/home">Debat</a>
+    <a mat-button routerLink="/info/contact" routerLinkActive="active">Customers</a>
+    <a mat-button routerLink="/company-record">Create Customer</a>
+    <a mat-button routerLink="/moduletest">Login</a>
+  </mat-toolbar-row>
+</mat-toolbar>
+<main>
+  <router-outlet style="margin-top: 80px;"></router-outlet>
+</main>

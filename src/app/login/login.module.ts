@@ -5,7 +5,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {routes} from './login-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import {LoginserviceService} from './loginview/loginservice.service'
+import {LoginserviceService} from './loginview/loginservice.service';
+import {MatButtonModule} from '@angular/material';
 
 
 
@@ -15,6 +16,7 @@ import {LoginserviceService} from './loginview/loginservice.service'
   exports: [LoginviewComponent],
   imports: [
     CommonModule,
+    MatButtonModule,
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,

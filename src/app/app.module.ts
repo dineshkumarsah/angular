@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material';
+import {MatCardModule} from '@angular/material/card';
+import {MyMaterialModule} from './material.module'
+
 
 
 
@@ -15,6 +19,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent, 
   ],
   imports: [
+    MyMaterialModule,
+    MatCardModule,
+    MatButtonModule,
     FormsModule,
     BrowserModule,
     AppRoutingModule,

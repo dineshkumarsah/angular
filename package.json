@@ -24,6 +24,7 @@
     "@swimlane/ngx-datatable": "^16.0.2",
     "@syncfusion/ej2-angular-grids": "^17.4.44",
     "@types/d3": "^5.7.2",
+    "angular-image-slider": "0.0.9",
     "bootstrap": "^3.4.1",
     "core-js": "^2.5.4",
     "d3": "^5.9.7",
