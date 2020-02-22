@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="card m-3">
+        <h5 class="card-header">Leave Apply Form</h5>
+        <div class="card-body">
+            <form action="" (ngSubmit)="Addleave(f)" #f="ngForm">
+                <div class="form-row">
+                    <div class="leave-date" ngModelGroup="leaveDate" #leaveDate="ngModelGroup"></div>
+                    <div class="form-group col">
+                        <label for="">Start Date</label>
+                        <input type="date" class="form-control" ngModel name="sdate" required #startDate="ngModel">
+                        <span class="help-block" *ngIf="!startDate.valid&&startDate.touched">Plies select first
+                            date</span>
+                    </div>
+                    <div class="form-group col">
+                        <label for="">End Date</label>
+                        <input type="date" class="form-control" ngModel name="edate" required #endDate="ngModel">
+                        <span *ngIf="!endDate.valid && endDate.touched">Plies Select Second Date</span>
+                    </div>
+
+                    <p *ngIf="!leaveDate.valid && leaveDate.touched">Date Should be valid</p>
+                    <div class="form-group col">
+                        <label for="">Leave Type</label>
+                        <select class="form-control" [ngModel]="defaultvalue" name="leaveType">
+                            <option value="cl">casule leave</option>
+                            <option value="pl">Previlege leave</option>
+                            <option value="hpl">Half pay Leave</option>
+                        </select>
+                    </div>
+                    <div class="form-group ">
+                        <label for="">Description</label>
+                        <textarea class="form-control" name="description" rows="5" id="comment"
+                            [(ngModel)]="description"></textarea>
+                        <p>You Reply: {{description}}</p>
+                    </div>
+                    <div class="form-group radio" *ngFor="let gender of genders">
+                        <label for="">
+                            <input type="radio" name="radio" ngModel [value]="gender">
+                            {{gender}}
+                        </label>
+                    </div>
+                    <div class="text-center">
+                        <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Submit</button>&nbsp;
+                        <button class="btn btn-danger" (click)="cancel()">cancel</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<p>Cotact pass technology: {{tech}}</p>
+<ul>
+  <li *ngFor=" let tech of technology">
+   <p> {{tech}}</p>
+  </li>
+</ul>
+<!-- exaple of @output parent contact and chield technology -->
+<input type="text" #childData (keyup)="onchange(childData.value)">

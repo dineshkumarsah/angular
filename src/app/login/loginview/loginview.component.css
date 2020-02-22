@@ -1,0 +1,21 @@
+.container{
+  margin-top: 50px;
+  width: 400px;
+  height: 400px;
+  border-radius: 10px;
+  border-width: 2px black;
+}
+#submit{
+  margin-left: 154px;
+}
+#head{
+  margin-left: 154px;
+    padding-bottom: 55px;
+}
+body{
+  background: lightgray;
+}
+.invalid-feedback{
+color:red;
+}
+

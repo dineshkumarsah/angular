@@ -1,0 +1,16 @@
+<div class="container">
+    <h4 (click)="close()"><span id="review">Review Form</span><span id="background">X</span></h4>
+    <form [formGroup]="formData" (ngSubmit)="submitData()">
+        <p>Id</p>
+        <input type="text" class="from-control" formControlName="id" class="form-control">
+        <div *ngIf="formData.controls.id.errors || formData.controls.id.errors?. validId" class="invalid-feedback">
+            <div *ngIf="formData.controls.id.errors.required">Id should be numeric</div>
+        </div>
+        <p>Name</p>
+        <input type="text" class="from-control" formControlName="name" class="form-control">
+        <div *ngIf="formData.controls.name.errors" class="invalid-feedback">
+            <div *ngIf="formData.controls.name.errors?.validname">Name should start with ht</div>
+        </div>
+        <button type="submit" id="submit" class="btn btn-primary" [disabled]="!formData.valid">Submit</button>
+    </form>
+</div>

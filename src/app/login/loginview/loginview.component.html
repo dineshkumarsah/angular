@@ -1,0 +1,14 @@
+<!-- main app container -->
+
+<div class="container" >
+    <h3 id="head">Login</h3>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="userName" class="form-control" placeholder="User name" (keyup)="validateMe()">
+        <p *ngIf="!f.userName.valid" class="invalid-feedback" >UserName should be mail<span style="color: red;"> *</span></p>
+        
+        <input type="password" formControlName="password" class="form-control" placeholder="password" >
+        <div *ngIf="!f.password.valid" class="invalid-feedback">Password should be 6 digit<span style="color: red;"> *</span></div>
+        
+        <button class="btn btn-primary" [disabled]="!loginForm.valid" id="submit" >sigin</button>
+    </form>
+</div>

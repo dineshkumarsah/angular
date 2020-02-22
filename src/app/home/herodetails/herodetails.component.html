@@ -1,0 +1,10 @@
+<div class="container">
+    
+
+    <div *ngIf="hero">
+        <h1>{{hero.name}}&nbsp; Details</h1>
+        Name:<input type="text" [(ngModel)]="hero.name">
+        <p><span>ID:{{hero.id}}</span>&nbsp;Name: {{hero.name}} </p>
+    </div>
+
+</div>

@@ -1,0 +1,4 @@
+<input type="text"  #techName (keyup)="0">
+<app-technology [tech]="techName.value"></app-technology>
+<app-technology [technology]="usedtechnology" (chieldEvent)="cData=$event"></app-technology>
+<p> this is tech{{cData}}</p>

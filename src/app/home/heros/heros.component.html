@@ -1,0 +1,28 @@
+<br>
+<div class="container">
+    <ul>
+        
+        <div class="card bg-primary text-white">
+            <div class="card-body">
+                
+                <li *ngFor="let hero of heros; index as i" (click)="selectedHero(hero)">
+                    <span class="badge">{{hero.id}}</span>&nbsp; {{hero.name}}
+                </li>
+            </div>
+        </div>
+        <button class=" btn btn-primary" (click)="addNew()">+</button>
+    </ul>
+    <app-herodetails [hero]="sel"></app-herodetails>
+ 
+</div>
+<ejs-grid id="Grid" [dataSource]='heros'  [allowPaging]="true" [editSettings]="true" [allowSorting]="true">
+    <e-columns>
+        <p>hfbhrb</p>
+      <e-column field='id' headerText='Id' textAlign='left' width=90></e-column>
+      <e-column field='name' headerText='name' textAlign='left' width=120></e-column>
+      <e-column field='leaveType' headerText='Leave Type' textAlign='left' format='C2' width=90></e-column>
+      <e-column field='action' headerText='Action' textAlign='left' format='yMd' width=120>
+      </e-column>
+  
+    </e-columns>
+  </ejs-grid>

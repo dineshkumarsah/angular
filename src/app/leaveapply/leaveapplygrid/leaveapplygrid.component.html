@@ -1,0 +1,44 @@
+<!-- <td class="container">
+  <h2>Leave Record</h2> <button class="btn btn-primary" id="btnset" (click)="addrecord()">Add Record</button>
+
+  <table class="table table-striped">
+
+    <thead>
+      <tr>
+
+        <th>start Date</th>
+        <th>End Date</th>
+        <th>Leave Type</th>
+        <th>perpose</th>
+        <th>Action</th>
+
+      </tr>
+
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let data of formData">
+
+        <td>{{data.sdate}}</td>
+        <td>{{data.edate}}</td>
+        <td>{{data.leaveType}}</td>
+        <td>{{data.description}}</td>
+        <td><button class=" btn btn-success"> Edit</button></td>
+
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+  </div> -->
+
+<ejs-grid id="Grid" [dataSource]='formData' [allowPaging]="true" [editSettings]="editSettings" [allowSorting]="true">
+  <e-columns>
+    <e-column field='sdate' headerText='Start Date' textAlign='Right' width=90></e-column>
+    <e-column field='edate' headerText='End Date' textAlign='Right' width=120></e-column>
+    <e-column field='leaveType' headerText='Leave Type' textAlign='Right' format='C2' width=90></e-column>
+    <e-column field='description' headerText='Description' textAlign='Right' format='yMd' width=120></e-column>
+
+  </e-columns>
+</ejs-grid>
+<button (click)="addrecord()">ADD</button>
