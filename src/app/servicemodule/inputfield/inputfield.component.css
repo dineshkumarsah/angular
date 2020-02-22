@@ -15,3 +15,10 @@
     border-style: solid;
     border-color: chartreuse;
 }
+input {
+    margin: 12px;
+}
+#inputDescription
+{
+    margin: 13px;
+}
